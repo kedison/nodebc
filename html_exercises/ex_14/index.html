@@ -9,10 +9,6 @@
     form input::placeholder {
         color: lightgrey;
     }
-
-    form fieldset label {
-        font-weight: 700;
-    }
 </style>
 
 <body>
@@ -31,6 +27,33 @@
 
             <label for="password">password:</label>
             <input type="password" id="password" name="password" placeholder="password" maxlength="8">
+        </fieldset>
+
+        <br>
+
+        <fieldset id="personal_info">
+            <legend>personal info</legend>
+
+            first name
+            <input type="text" id="firstname" name="firstname" placeholder="first name" required="required">
+
+            last name
+            <input type="text" id="lastname" name="lastname" placeholder="last name" required="required">
+
+            <br>
+
+            date of birth:
+            <input type="date">
+
+            <br>
+
+            email
+            <input type="email" id="email" name="email" placeholder="@email.com">
+
+            <br>
+
+            personal site
+            <input type="url" id="personal_site" name="personal_site" placeholder="www.yoursite.com">
         </fieldset>
 
         <br>
@@ -65,8 +88,16 @@
 
         <input type="image" id="registerimage" alt="register" src="https://i.dlpng.com/static/png/160914_preview.png"
             style="max-width:10%;">
-            
     </form>
+
+    <br>
+
+    <form action="https://www.google.ca/search?q=YOUR_SEARCH_VALUEt" method="get"
+        enctype="application/x-www-form-urlencoded">
+        <input type="search" name="q" placeholder="search . . .">
+        <input type="submit" value="search">
+    </form>
+
 </body>
 
 </html>
