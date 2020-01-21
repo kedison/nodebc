@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        exercise 11 index login
+    </title>
+</head>
+
+<style>
+    form label {
+        font-size: 20px;
+    }
+
+    form input {
+        font-size: 20px;
+
+    }
+
+    form input::placeholder {
+        color: lightgrey;
+    }
+</style>
+
+<body>
+    <h1>login</h1>
+    <hr>
+    <br>
+    <form action="login.html" method="post" enctype="application/x-www-form-urlencoded">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="input username" minlength="4" maxlength="12">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="input password" minlength="8" maxlength="8">
+        <br>
+        <br>
+        <input type="submit" name="login" value="Login">
+    </form>
+</body>
+
+</html>
