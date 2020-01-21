@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selectors</title>
+</head>
+
+<style>
+    h1 {
+        color: green;
+    }
+
+    * {
+        color: green;
+    }
+
+    .red {
+        color: red;
+    }
+
+    #login ::placeholder {
+        color: blue;
+    }
+
+    #login label, #login input{
+        color: pink;
+    }
+
+    #login input {
+        color: brown;
+    }
+
+</style>
+
+<body>
+    <h1>Selectors</h1>
+    <hr>
+    <form id="login">
+        <div>
+            <label for="username">Username</label>
+            <input name="username" id="username" placeholder="Username">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input name="password" id="password" placeholder="Password">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <div>
+        <p>This text is <span class="red">red</span></p>
+        <a href="#" class="red">Link</a>
+    </div>
+</body>
+
+</html>
