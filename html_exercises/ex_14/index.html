@@ -1,3 +1,18 @@
+<!-- Exercise 14
+Copy and paste the folder from exercise 12
+index.html
+Add the following inputs to the current form:
+Add a Date input so the user can select his birthday
+Add a Email input
+Add a your site URL input
+The submit button must be at the bottom of the form
+Create a new form that only has a Search input and a submit button with the text search
+The form action must point to google https://www.google.ca/search
+The search input name must be q
+By submiting the form you'll get a URL like: https://www.google.ca/search?q=YOUR_SEARCH_VALUE
+All new inputs must have a label element with the for attribute configured
+All new inputs must have a name attribute to describe the value the user will input -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,26 +49,27 @@
         <fieldset id="personal_info">
             <legend>personal info</legend>
 
-            first name
+            <label for="text">first name</label>
             <input type="text" id="firstname" name="firstname" placeholder="first name" required="required">
 
-            last name
+            <label for="text">last name</label>
             <input type="text" id="lastname" name="lastname" placeholder="last name" required="required">
 
             <br>
 
-            date of birth:
-            <input type="date" id=date name="dob"> /
+            <label for="date">date of birth</label>
+            <input type="date" id=date name="date_of_birth"> /
             <input type="date" id="date" value="1980-04-02">
 
             <br>
 
-            email
+            <label for="email">email</label>
             <input type="email" id="email" name="email" placeholder="@email.com">
 
             <br>
 
             personal site
+            <label for="url">personal site</label>
             <input type="url" id="personal_site" name="personal_site" placeholder="www.yoursite.com">
         </fieldset>
 
@@ -93,10 +109,11 @@
 
     <br>
 
+    <label for="search">search:</label>
     <form action="https://www.google.ca/search?q=YOUR_SEARCH_VALUEt" method="get"
         enctype="application/x-www-form-urlencoded">
         <input type="search" name="q" placeholder="search . . .">
-        <input type="submit" value="search">
+        <input type="submit" name="submit" value="search">
     </form>
 
 </body>
