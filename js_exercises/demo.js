@@ -44,6 +44,6 @@ let name = 'Bruce Wayne';
 console.log('welcome ' + name)
 console.log('welcome %s', name)
 
-// template leteral method
+// template leteral method (make sure to use ` not the ')
 console.log(`welcome ${name}`)
 console.log(`welcome ${name} \nHave a nice day`)
