@@ -5,3 +5,6 @@
 // Print the message value using console.log()
 
 
+var message = 'ComIT has the "best" programming courses';
+
+console.log(message, typeof(message));
