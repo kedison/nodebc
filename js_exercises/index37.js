@@ -10,7 +10,7 @@ let average = 6;
 let studentAverage = 4;
 
 let result = (studentAverage >= average);
-let missingPoints = (studentAverage < average);
+let missingPoints = (result === false);
 
 console.log('pass = ', result);
 console.log('missing points = ', missingPoints);
