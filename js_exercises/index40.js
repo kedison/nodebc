@@ -4,4 +4,7 @@
 // Define a method variable and assign the following value: concat method
 // Show the following output using the string concat method: Using the concat method
 
-const text = 'string of text';
+const text = 'Using the ';
+const message = text.concat('concat method');
+
+console.log(message);
