@@ -4,7 +4,16 @@
 
 let number = 0;
 
-while (number <10){
-    console.log(number);
-    number+2;
+while (number < 20) {
+    number++
+    if (number % 2 === 0) {
+        console.log(number);
+    }
 }
+
+// while (number < 100) {
+//     number++
+//     if (number % 10 === 0) {
+//         console.log(number);
+//     }
+// }
