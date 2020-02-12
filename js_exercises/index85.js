@@ -4,7 +4,7 @@
 // Refactor the code to use do/while instead of while
 
 
-let n = 10;
+let n = 1;
 let f = 0;
 let f1 = -1;
 let f2 = 1;
@@ -14,5 +14,6 @@ do {
     f1 = f2;
     f2 = f;
     console.log(f);
+    n++;
 }
-while (f <= n) {}
+while (n<=10) {}
