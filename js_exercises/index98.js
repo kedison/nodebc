@@ -4,3 +4,10 @@
 // The iteration must break if the partial result is bigger than 400
 // Show the result as output
 
+for (let i = 0, s = 0; i <= 1000; i++) {
+    s += i;
+    console.log(s);
+    if (s >= 400) {
+        break;
+    }
+}
