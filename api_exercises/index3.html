@@ -1,0 +1,38 @@
+<!-- Exercise 3
+Create the following folder/file structure:
+/ex_3
+  |-- index.html
+index.html
+Create a basic HTML document
+Create a script tag on the document head element
+Show the user the following message using the alert
+Open the browser and see the final result
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 3</title>
+</head>
+
+<body>
+
+    <h1>Congrats!!</h1>
+    <p>you are running a server now</p>
+
+    <h1>Hi</h1>
+    <p>Add the script tag</p>
+
+    <script>
+        // let alert2 = alert('How cool is that!!');
+        // setTimeout only works with function() 
+        let alert2 = function() {
+            alert('How cool is that!!');
+        }
+        setTimeout(alert2, 5000);
+    </script>
+</body>
+
+</html>
