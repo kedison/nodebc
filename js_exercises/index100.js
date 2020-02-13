@@ -11,3 +11,5 @@ function showEvenNumbers() {
         }
     }
 }
+
+showEvenNumbers();
