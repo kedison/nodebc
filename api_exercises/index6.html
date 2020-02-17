@@ -1,0 +1,39 @@
+<!-- Exercise 6
+Create the following folder/file structure:
+/ex_6
+  |-- index.html
+index.html
+Create a basic HTML document
+Create a script tag on the document head element
+Using the confirm method show the user the following method:
+Would you like the author of this document?
+If the user confirms the question then we show him the following message
+The author is %firstname% %lastname%%
+Else we show the following message:
+So, So, SOOO, sad.. the author is crying now... thanks
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 6</title>
+
+    <script>
+        let isLike = window.confirm('would you like the author of this document?');
+        if(isLike) {
+            alert('the author is Bruce Wayne');
+        }
+        else {
+            alert('So, So, SOOO, sad.. the author is crying now... thanks');
+        }
+
+    </script>
+</head>
+
+<body>
+<h1>ex 6</h1>
+</body>
+
+</html>
