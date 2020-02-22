@@ -11,5 +11,40 @@ The final result is: %result%
 The user input %numbers% numbers
 The average is: %average%
  -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex 8</title>
+  <script>
+    alert('This program adds all the numbers you input');
+
+    let s = 0;
+    let c = true;
+
+    let count = 0;
+
+    while (c == true) {
+      n = Number(prompt('input a number to add'));
+      s += n;
+      c = confirm('have another number to input?');
 
 
+      count++;
+      inputAverage = s / count;
+
+      inputNumbers = n;
+    }
+
+    alert(`the result so far is ${s}`);
+    console.log(`user input numbers are ${inputNumbers}`);
+    console.log(`the average is ${inputAverage}`);
+  </script>
+</head>
+
+<body>
+  <h1>ex 8</h1>
+</body>
+
+</html>

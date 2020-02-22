@@ -23,18 +23,29 @@ The result so far is: %result% -->
     <script>
         alert('This program adds all the numbers you input');
 
-        let n = window.prompt('input a number to add');
         let s = 0;
+        let c = true;
 
-        while (prompt() == true) {
-            s += parseInt(n);
-            if (prompt() == true) {
-                window.prompt('input a number to add');
-            } else {
-                alert('the result so far is: ' + s);
-                break;
-            }
+        while (c == true) {
+            n = Number(prompt('input a number to add'));
+            s += n;
+            c = confirm('have another number to input?');
         }
+
+        alert(`the result so far is ${s}`);
+
+
+
+        // alert("This program adds all the numbers you input");
+        //    let result = 0;
+        //    let finish = true;
+        //    let num = 0;
+        //    while(finish == true){
+        //         num = Number(prompt("please input the number","number"));
+        //         result +=num;
+        //         finish = confirm("have other number to input?");
+        //    }
+        //    console.log(`The result so far is: ${result}`);
     </script>
 </head>
 
