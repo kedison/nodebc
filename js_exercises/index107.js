@@ -12,4 +12,25 @@
 
 const biggerNumber = function (firstParam, secondParam) {
 
+    if (typeof firstParam == 'number' && typeof secondParam == 'number') {
+        if (firstParam > secondParam) {
+            console.log(`first number ${firstParam} is greater than the second number ${secondParam}`);
+            console.log(typeof (firstParam), typeof (secondParam));
+        } else if (secondParam > firstParam) {
+            console.log(`second number ${secondParam} is greater than the first number ${firstParam}`);
+            console.log(typeof (firstParam), typeof (secondParam));
+        } else {
+            console.log(`both numbers are the same ${firstParam} = ${secondParam}`);
+            console.log(typeof (firstParam), typeof (secondParam));
+        }
+
+    } else if (typeof firstParam != 'number' && typeof secondParam != 'number') {
+        console.log(`both parameters are not numbers`);
+    } else if (typeof firstParam != 'number') {
+        console.log(`first param is not a number`);
+    } else {
+        console.log(`second param is not a number`);
+    }
 }
+
+biggerNumber(1, true);
