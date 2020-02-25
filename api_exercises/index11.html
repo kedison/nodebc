@@ -17,6 +17,7 @@ Else show the following message
 %username% your session has expaired -->
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,24 +25,23 @@ Else show the following message
     <script>
         let userName = window.prompt('enter username');
         let passWord = window.prompt('enter password');
-        alert('Welcome ' + userName);
+        alert(`welcome ${userName}`);
 
-        const message = function () {
-            prompt('do you still want to be logged?');
+        let timedFunction = function() {
+            let timeOutMessage = confirm('do you still want to be logged?');
+            
+            if (timeOutMessage == true) {
+                alert(userName + ' your session has been restored');
+            } else {
+                alert(userName + ' your session has expired');
+            }
         }
-
-        window.prompt(setTimeout(message, 10000));
-        if (prompt()) {
-            alert(userName + ' your session has been restored');
-        }
-        else {
-            alert(userName + ' your session has expired');
-        }
-
-
+        setTimeout(timedFunction, 5000);
     </script>
 </head>
+
 <body>
     <h1>ex 11</h1>
 </body>
+
 </html>

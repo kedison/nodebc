@@ -22,23 +22,22 @@ The average is: %average%
 
     let s = 0;
     let c = true;
-
     let count = 0;
+    var arrayList = [];
+
 
     while (c == true) {
       n = Number(prompt('input a number to add'));
       s += n;
       c = confirm('have another number to input?');
 
-
+      arrayList.push(n);
       count++;
       inputAverage = s / count;
-
-      inputNumbers = n;
     }
 
     alert(`the result so far is ${s}`);
-    console.log(`user input numbers are ${inputNumbers}`);
+    console.log(`user input numbers are ${arrayList}`);
     console.log(`the average is ${inputAverage}`);
   </script>
 </head>
