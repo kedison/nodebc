@@ -10,3 +10,5 @@
 // index.js
 // Show the express object as output
 
+const express = require('express');
+console.log(express);
