@@ -29,29 +29,39 @@
 // validateUser(0, 0);
 
 
-const validateUser = function (username) {
+// const validateUser = function (username, password) {
 
-    var user = {
-        name: 'john',
-        password: 'john123'
-    };
-    // var user = {
-    //     name: 'robert',
-    //     password: 'robert123'
-    // };
+//     var user = {
+//         name: 'john',
+//         password: 'john123'
+//     };
 
-    let x = user.name;
-    let y = user.password;
+//     let x = user.name;
+//     let y = user.password;
 
-    var list = [
-        x
-    ];
+//     var usernameArray = [x];
+//     var passwordArray = [y];
 
-    if (username ===list) {
-        console.log("hi " + user.name);
-    } else {
-        console.log('user not found');
-    }
+//     if (username == usernameArray && password == passwordArray) {
+//         console.log("hi " + user.name);
+//     } else {
+//         console.log('user not found');
+//     }
 
+// }
+// validateUser('john', 'john123');
+const validateUser = function (username, password) {
+
+const map1 = new Map();
+map1.set('bar', 'foo');
+map1.set('waa', 'fla');
+
+console.log(map1.get('bar'));
+// expected output: "foo"
+
+console.log(map1.get('waa'));
+// expected output: undefined
 }
-validateUser('john');
+
+
+validateUser('john', 'john123');

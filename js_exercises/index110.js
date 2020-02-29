@@ -9,12 +9,7 @@
 let averageFunc = function (firstNum, secondNum, thirdNum, fourthNum, fifthNum){
     var average = (firstNum + secondNum + thirdNum + fourthNum + fifthNum)/ 5;
 
-   
-    var count = averageFunc();
-    var averageList = [];
-    averageList.push(count);
-    
-    console.log(`the average is ${average}, and the inputted numbers are ${averageList}`);
+    console.log(`the average is ${average}, and the inputted numbers are `, firstNum, secondNum, thirdNum, fourthNum, fifthNum);
 }
 
 averageFunc(2,2,2,2,2);
