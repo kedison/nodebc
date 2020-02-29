@@ -20,11 +20,15 @@ const express = require('express');
 const app = express();
 
 // configure the default route and send a text as response
-app.get('/', function(request, response) {
+app.get('/', function (request, response) {
   response.send('Hello Node.js World!');
 });
 
+app.get('/', (request, response) => response.send('Hello Node.js World!'));
+app.get('/about', (request, response) => response.send('This is my about page'));
+app.get('/contact', (request, response) => response.send('Ths is my contact page'));
+
 // configure the port that express is going to listen to
-app.listen(3000, function() {
+app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
