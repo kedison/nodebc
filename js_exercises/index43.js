@@ -24,3 +24,5 @@
 
 let title = 'game of thrones'
 let firstChar = ''
+
+not done yet
