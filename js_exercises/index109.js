@@ -10,7 +10,6 @@
 // Try calling the validateUser with valid credentials and also with invalid ones
 
 
-
 // const validateUser = function (username, password) {
 //     var usernameList = [1, 2];
 //     var passwordList = [1, 2];

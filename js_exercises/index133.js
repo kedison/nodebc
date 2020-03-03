@@ -30,14 +30,16 @@ mutantArray.push('Phoenix');
 mutantArray.push('Logan');
 mutantArray.push('Gambit');
 
-mutantArray.forEach(function (mutant) {
-            if (mutantArray.indexOf('Magneto') > -1) {
-                    console.log(1);
-                } else {
-                    console.log(mutant);
-                }
+console.log('first part: '.toUpperCase());
 
-            
-            })
 
-            not done yet
+for (var c = 0; c <= mutantArray.length; c++) {
+    if (mutantArray[c] != mutantArray.indexOf("Magneto")) {
+        console.log(mutantArray[c]);
+    } else {
+        break;
+    }
+}
+
+
+not done yet
