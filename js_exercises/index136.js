@@ -32,12 +32,13 @@ mutantArray.push('Gambit');
 // })
 
 
-var c = 0;
+
 var arrayString = [];
 
 var searchMutant = function (name) {
+    var c = 0;
     while (c <= mutantArray.length) {
-        if (name === mutantArray[c]) {
+        if (name == mutantArray[c]) {
             arrayString.push(name);
         }
         c++;
@@ -49,3 +50,5 @@ searchMutant('Logan');
 searchMutant('Phoenix');
 
 console.log(arrayString.toString());
+
+
