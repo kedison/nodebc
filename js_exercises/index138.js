@@ -19,6 +19,39 @@
 // Show the original mutant array items as output
 // Show the updated mutant array items as output
 
-not done yet
+const mutantArray = [];
+
+mutantArray.push('Professor X');
+mutantArray.push('Cyclops');
+mutantArray.push('Iceman');
+mutantArray.push('Angel');
+mutantArray.push('Magneto');
+mutantArray.push('Beast');
+mutantArray.push('Phoenix');
+mutantArray.push('Logan');
+mutantArray.push('Gambit');
 
 
+// addHeart.forEach(function (mutant, index) {
+//     console.log('index-', index, 'mutant-', mutant);
+// });
+
+var array1 = [];
+
+var searchMutant = function (name) {
+    var c = 0;
+    while (c <= mutantArray.length) {
+        if (name == mutantArray[c]) {
+            const aop = mutantArray.map(x => "<3 " + x);
+            array1.push(aop);
+        }
+
+        c++;
+    }
+}
+
+searchMutant('Iceman');
+searchMutant('Logan');
+searchMutant('Phoenix');
+
+console.log(array1);

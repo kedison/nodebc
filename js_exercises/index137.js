@@ -10,7 +10,7 @@
 
 const numberArray = [];
 
-var n = 1;
+var n = 0;
 var m = 10;
 
 while (n <= m) {
@@ -21,5 +21,5 @@ while (n <= m) {
 const numberAddTen = numberArray.map(x => x + 10);
 
 numberAddTen.forEach(function (result, index) {
-    console.log('index-', index, 'original-', n++ -10 , 'incremented value-', result);
+    console.log('index-', index, 'original-', numberArray[index] , 'incremented value-', result);
 });

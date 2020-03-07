@@ -27,12 +27,6 @@ mutantArray.push('Phoenix');
 mutantArray.push('Logan');
 mutantArray.push('Gambit');
 
-// mutantArray.forEach(function (mutant, index) {
-//     console.log('index-', index, ' name-', mutant);
-// })
-
-
-
 var arrayString = [];
 
 var searchMutant = function (name) {
