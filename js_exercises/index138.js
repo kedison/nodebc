@@ -45,7 +45,6 @@ var searchMutant = function (name) {
             const aop = mutantArray.map(x => "<3 " + x);
             array1.push(aop);
         }
-
         c++;
     }
 }
@@ -55,3 +54,5 @@ searchMutant('Logan');
 searchMutant('Phoenix');
 
 console.log(array1);
+
+not done yet

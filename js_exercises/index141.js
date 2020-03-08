@@ -10,4 +10,26 @@
 // Show the final budget items as output with the following format
 // Total trip budget: %budget%
 
+// const tripExpenses = [1,2,1];
+// const accumulatorReducer = (accumulatorR,x,y) => accumulatorR + x + y;
+// const currentValueReducer = (currentvR) => currentvR;
+// const totalReducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// var aR = tripExpenses.reduce(accumulatorReducer);
+// var cR = tripExpenses.reduce(currentValueReducer);
+// var totalTripBudget = tripExpenses.reduce(totalReducer);
+
+// console.log(aR);
+// console.log(cR);
+
+// console.log(totalTripBudget);
+
+const tripExpenses = [1,2,3];
+
+let sum = tripExpenses.reduce((accumulator, currentValue) => accumulator + currentValue,0);
+
+
+console.log(sum)
+
+not done yet
 
