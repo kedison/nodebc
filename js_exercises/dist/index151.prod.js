@@ -1,1 +1,0 @@
-"use strict";var groot={greet:function(){return"Greet: I'm Groot!!"},speak:function(){return"Speak: I'm Groot!!"}};console.log(groot.greet()),console.log(groot.speak());

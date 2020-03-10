@@ -1,1 +1,0 @@
-"use strict";var user={username:null,password:null,greet:function(){},updatePassword:function(){},updaterUsername:function(e){user.username=e}};updaterUsername("John"),null!=user.username?console.log("Hello, I'm user ".concat(user.username)):console.log("Please assign a username value");

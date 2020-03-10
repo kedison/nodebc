@@ -1,1 +1,0 @@
-"use strict";var userObject={username:"batman",password:"Alfred1960KPO!"};function myFunction(e,a){userObject.username===e&&userObject.password===a?console.log("Welcome back batman!"):console.log("Sorry, you can't enter the Batcave, try again..")}myFunction("batman","Alfred1960KPO!");

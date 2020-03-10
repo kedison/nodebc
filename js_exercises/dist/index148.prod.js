@@ -1,1 +1,0 @@
-"use strict";var superhero={name:"Batman",secretName:"Bruce",sidekick:["Robin","Alfred","Gordon"],strength:70};console.log(superhero),console.log(superhero.speed),superhero.speed="50 mph",console.log(superhero.speed);
