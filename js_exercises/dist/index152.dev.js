@@ -1,3 +1,5 @@
+"use strict";
+
 // Exercise 152
 // Create a new index152.js
 // Define a user variable and assign a literal object with the following properties:
@@ -20,31 +22,26 @@
 // Call updaterUsername passing a username value as string
 // Call updatePassword passing a password value as string
 // Call the greet method again (you should see the expected output)
+var user = {
+  username: null,
+  password: null,
+  greet: function greet() {
+    if (user.username != null && user.password != null) {
+      console.log("Hello, I'm user ".concat(user.username));
+    } else {
+      console.log("Please assign a username value");
+    }
 
-const user = {
-    username: null,
-    password: null,
-    greet: function () {
-        if (user.username != null && user.password !=  null) {
-            console.log(`Hello, I'm user ${user.username}`);
-        } else {
-            console.log(`Please assign a username value`);
-        };
-    },
-    updatePassword: function (string) {
-        user.password = string;
-    },
-    updaterUsername: function (string) {
-        user.username = string;
-    },
+    ;
+  },
+  updatePassword: function updatePassword(string) {
+    user.password = string;
+  },
+  updaterUsername: function updaterUsername(string) {
+    user.username = string;
+  }
 };
-
-
 user.greet();
-
 user.updaterUsername('John');
 user.updatePassword('Johnspassword1234');
-
 user.greet();
-
-
