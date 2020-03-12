@@ -11,3 +11,5 @@ This project it's to learn HTML, CSS, JS, Node.js and MongoDB
 3. [API exercises](https://github.com/emersonmellado/nodebcjan6/blob/master/browserapi.md)
 
 4. [NODE JS exercises](https://github.com/emersonmellado/nodebcjan6/blob/master/nodejs.md)
+
+4. [MongoDB & Mongoose exercises](https://github.com/emersonmellado/nodebcjan6/blob/master/mongodb.md)
