@@ -1,0 +1,1 @@
+"use strict";var MongoClient=require("mongodb").MongoClient,url="mongodb://localhost:27017";MongoClient.connect(url,function(o,n){console.log("Connected successfully to server"),n.db("comics").collection("superheroes").find({}).toArray(function(o,n){console.log(n)})});
