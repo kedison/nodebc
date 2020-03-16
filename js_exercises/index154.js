@@ -43,21 +43,27 @@ const player = {
         if (typeof damage == 'number') {
             this.energy -= damage;
         } else {
-            return "please input a numeric value";
+            console.log("please input a numeric value");
         }
     },
     recoverEnergy: function (energyUp) {
         if (typeof energyUp == 'number') {
             this.energy += energyUp;
-        } else {     
-            return "please input a numeric value";
+        } else {
+            console.log("please input a numeric value");
         }
     },
     loseLife: function () {
         this.lives--;
+        if (this.energy <= 0) {
+            this.lives--;
+        }
     },
     recoverLife: function () {
         this.lives++;
+        if (this.lives >= 99){
+            console.log(`${player.name} lives cannot exceed 99`)
+        }
     }
 };
 
@@ -68,13 +74,18 @@ player.loseEnergy(5);
 player.loseEnergy(15);
 player.loseEnergy(20);
 player.recoverEnergy(10);
-player.loseEnergy(30);
-player.loseEnergy(40);
+// player.loseEnergy(30);
+// player.loseEnergy(40);
 player.loseLife();
 player.recoverLife();
 player.recoverLife();
 
+// while (player.lives <1000){
+//     player.recoverLife();
+// }
 
-console.log(player.name);
-console.log(player.lives);
-console.log(player.energy);
+
+console.log(`the player ${player.name} has ${player.energy} energies and ${player.lives} lives`);
+
+not done yet
+energy > 0 and < 100
