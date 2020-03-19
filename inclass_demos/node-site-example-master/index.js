@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const MongoClient = require('mongodb').MongoClient;
+const ObjectID = require('mongodb').ObjectID;
+const url = 'mongodb://localhost:27017';
 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -20,57 +23,131 @@ var storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 app.use('/', express.static('public'));
 
+//Setting up pug as template engine
+//using the convention to have all views in views folder.
 app.set('view engine', 'pug');
 
-const superheroes = [
-    { id: 1, name: 'SPIDER-MAN', image: 'spiderman.jpg' },
-    { id: 2, name: 'CAPTAIN MARVEL', image: 'captainmarvel.jpg' },
-    { id: 3, name: 'HULK', image: 'hulk.jpg' },
-    { id: 4, name: 'THOR', image: 'thor.jpg' },
-    { id: 5, name: 'IRON MAN', image: 'ironman.jpg' },
-    { id: 6, name: 'DAREDEVIL', image: 'daredevil.jpg' },
-    { id: 7, name: 'BLACK WIDOW', image: 'blackwidow.jpg' },
-    { id: 8, name: 'CAPTAIN AMERICA', image: 'captanamerica.jpg' },
-    { id: 9, name: 'WOLVERINE', image: 'wolverine.jpg' },
-];
-
+//Index - Entry point - First page a user will see 
 app.get('/', (req, res) => {
-    res.render('index', { superheroes: superheroes });
+    //internal scope of this function
+    MongoClient.connect(url, function (err, client) {
+        const db = client.db('comics');
+        const collection = db.collection('superheroes');
+
+        collection.find({}).toArray((error, documents) => {
+            client.close();
+            documents.reverse();
+            const indexVariables = {
+                pageTitle: "First page of our app",
+                superheroes: documents
+            }
+            res.render('index', { variables: indexVariables });
+        });
+    });
 });
 
-app.get('/create', (req, res)=>{
+//Create endpoint
+app.get('/create', (req, res) => {
+    //internal scope of this function
     res.render('create');
 })
 
-app.get('/superheroes/', (req, res) => {
-    res.render('superhero', { superheroes: superheroes });
-});
-
+//detail view
 app.get('/superheroes/:id', (req, res) => {
-    const selectedId = req.params.id;
+    //internal scope of this function
+    MongoClient.connect(url, function (err, client) {
+        const db = client.db('comics');
+        const collection = db.collection('superheroes');
+        const selectedId = req.params.id;
 
-    let selectedSuperhero = superheroes.filter(superhero => {
-        return superhero.id === +selectedId;
+        collection.find({ "_id": ObjectID(selectedId) }).toArray((error, documents) => {
+            client.close();
+            res.render('superhero', { superheroe: documents[0] });
+        });
     });
-
-    selectedSuperhero = selectedSuperhero[0];
-
-    res.render('superhero', { superheroe: selectedSuperhero });
 });
 
-app.post('/superheros', upload.single('file'), (req, res) => {
-    const newId = superheroes[superheroes.length - 1].id + 1;
-    
+//update view
+app.get('/update/:id', (req, res) => {
+    //internal scope of this function
+    MongoClient.connect(url, function (err, client) {
+        const db = client.db('comics');
+        const collection = db.collection('superheroes');
+        const selectedId = req.params.id;
+
+        collection.find({ "_id": ObjectID(selectedId) }).toArray((error, documents) => {
+            client.close();
+            res.render('update', { superheroe: documents[0] });
+        });
+    });
+});
+
+//delete endpoint
+app.get('/delete/:id', (req, res) => {
+    //internal scope of this function
+    MongoClient.connect(url, function (err, client) {
+        const db = client.db('comics');
+        const collection = db.collection('superheroes');
+        const idToDelete = req.params.id;
+
+        collection.deleteOne({ "_id": ObjectID(idToDelete) });
+        client.close();
+        res.redirect('/');
+    });
+});
+
+//Create post method
+app.post('/superheroes', upload.single('file'), (req, res) => {
+    //internal scope of this function
     const newSuperHero = {
-      id: newId, 
-      name: req.body.superhero.toUpperCase(), 
-      image: req.file.filename
+        name: req.body.superhero.toUpperCase(),
+        image: req.file.filename
     }
-    
-    superheroes.push(newSuperHero);
-    
-    res.redirect('/');
-  });
+
+    //Replace .push() to a mongodb call
+    MongoClient.connect(url, function (err, client) {
+        const db = client.db('comics');
+        const collection = db.collection('superheroes');
+
+        collection.insertOne(newSuperHero);
+
+        client.close();
+        res.redirect('/');
+    });
+});
+
+//Update method superheroeUpdate
+app.post('/superheroUpdate/:id', upload.single('file'), (req, res) => {
+
+    MongoClient.connect(url, function (err, client) {
+        const db = client.db('comics');
+        const collection = db.collection('superheroes');
+        const selectedId = req.params.id;
+
+        //from command line we update an object collection with the following syntax
+        //db.superheroes.updateOne({"name":"ANT MAN"}, { $set: { "name":"ANT MAN 1"} })
+
+        let filter = { "_id": ObjectID(selectedId) };
+
+        let updateObject = {
+            "name": req.body.superhero.toUpperCase(),
+        }
+
+        if (req.file){
+            console.log("Updating image");
+            updateObject.image = req.file.filename;
+        }
+        
+        let update = {
+            $set: updateObject
+        };
+
+        collection.updateOne(filter, update);
+
+        client.close();
+        res.redirect('/');
+    });
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
