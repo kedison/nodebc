@@ -1,0 +1,17 @@
+extends ./layout.pug
+
+block content
+    a(href="/create" class="btn btn-primary") Create
+    p= variables.pageTitle
+    hr
+    .card-group
+        each sh in variables.superheroes
+            .col-xs-12.col-md-4.col-lg-3
+                a(href="/superheroes/" + sh._id)
+                    .card
+                        img(class="card-img-top" src='/img/superheroes/' + sh.image alt=sh.image)
+                        .card-body
+                            h5(class="card-title")= sh.name
+                            p(class="card-text")= sh.name
+                            a(href="/delete/" + sh._id class="btn btn-danger") Delete
+                            a(href="/update/" + sh._id class="btn btn-info") Update
