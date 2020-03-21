@@ -1,0 +1,15 @@
+extends ./layout.pug
+
+block content
+  div(class="card" style="width: 18rem;")
+    img(class="card-img-top" src='/img/superheroes/' + superheroe.image alt="superheroe.image")
+    div(class="card-body")
+      h5(class="card-title")= superheroe.name
+      p(class="card-text")= superheroe.name
+      a(href="#" class="btn btn-outline-danger") Go somewhere
+
+block bottomNavigation
+  a(href="/" class="btn btn-link") Go back
+
+block footer
+  div(style="background-color: red")=superheroe.name
