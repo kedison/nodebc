@@ -7,3 +7,8 @@ body {
     width: 40px;
 } */
 
+.jumbotron {
+    background-color: black;
+    text-align: left;
+}
+
