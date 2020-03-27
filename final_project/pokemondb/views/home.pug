@@ -16,17 +16,13 @@ html
                             span.sr-only (current)
                     li.nav-item
                         a.nav-link(href='/about') About
-        br
 
         .jumbotron.jumbotron-fluid
             .container
                 //- h1.display-4 Pokédex Database
                 //- p.lead
                 //- | This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                img.img-fluid(src='img/pokeball.jpg' alt='Responsive image')
-
-
-        br
+                img.img-fluid(src='img/pokeball.jpg' alt='pokeball hero image')
 
         div.container-fluid
             h1 Pokédex Database
@@ -37,10 +33,9 @@ html
             h5 Update The Database
             p To update the Pokédex Database, please select the create button
 
-            button.btn.btn-primary.btn-lg.btn-block(type='button') Create
+            button.btn.btn-danger.btn-lg.btn-block(type='button') Create
 
             br
-
 
             table.table.table-hover.table-borderless.table-light.table-responsive-lg
                 thead
@@ -84,6 +79,39 @@ html
                         th(scope='row') 003
                         td Venusaur
                         td Grass + Poison
+                        td 80
+                        td 82
+                        td 83
+                        td 
+                            a.badge.badge-dark(href='#') Edit
+                        td 
+                            a.badge.badge-light(href='#') Delete
+                    tr
+                        th(scope='row') 004
+                        td Charmander
+                        td Fire
+                        td 80
+                        td 82
+                        td 83
+                        td 
+                            a.badge.badge-dark(href='#') Edit
+                        td 
+                            a.badge.badge-light(href='#') Delete
+                    tr
+                        th(scope='row') 005
+                        td Charmeleon
+                        td Fire
+                        td 80
+                        td 82
+                        td 83
+                        td 
+                            a.badge.badge-dark(href='#') Edit
+                        td 
+                            a.badge.badge-light(href='#') Delete
+                    tr
+                        th(scope='row') 006
+                        td Charizard
+                        td Fire + Flying
                         td 80
                         td 82
                         td 83
