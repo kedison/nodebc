@@ -1,6 +1,6 @@
 // mongoose implementation
 const mongoose = require('mongoose');
-const PokemondbStructure = require('../../models/pokemondbStructure')
+const PokemondbStructure = require('../../models/pokemondbStructure');
 
 const indexv = async (req, res) => {
     // mongodb://pokemondb:<password>@cluster0-shard-00-00-gpfrf.mongodb.net:27017,cluster0-shard-00-01-gpfrf.mongodb.net:27017,cluster0-shard-00-02-gpfrf.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority
