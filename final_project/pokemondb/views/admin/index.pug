@@ -46,7 +46,6 @@ html
                 thead
                     tr
                         th(scope='col') #
-                        //- th(scope='col') Image
                         th(scope='col') Pokemon
                         th(scope='col') Type
                         th(scope='col') HP
@@ -54,21 +53,19 @@ html
                         th(scope='col') Defense
                         th(scope='col') Update
                         th(scope='col') Remove
-                tbody
                     each PokemondbStructure in pokemondb
-                        tr
-                            th(scope='row')= pokemondb.number
-                            //- td
-                            //-     img.img-thumbnail(src='img/charizard.png' alt='...')
-                            td= pokemondb.name
-                            td= pokemondb.type
-                            td= pokemondb.hp
-                            td= pokemondb.attack
-                            td= pokemondb.defense
-                            td 
-                                a.badge.badge-dark(href='/admin/update') Edit
-                            td 
-                                a.badge.badge-danger(href='/admin/delete') Delete
+                        tbody
+                            tr
+                                th(scope='row')=PokemondbStructure.number
+                                td=PokemondbStructure.name
+                                td=PokemondbStructure.type
+                                td=PokemondbStructure.hp
+                                td=PokemondbStructure.attack
+                                td=PokemondbStructure.defense
+                                td 
+                                    a.badge.badge-dark(href='/admin/update') Edit
+                                td 
+                                    a.badge.badge-danger(href='/admin/delete') Delete
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')

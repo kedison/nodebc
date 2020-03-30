@@ -13,7 +13,7 @@ const adminCreatev = (req, res) => {
     let uri ="mongodb://pokemondb:pokemondb1234@cluster0-shard-00-00-gpfrf.mongodb.net:27017,cluster0-shard-00-01-gpfrf.mongodb.net:27017,cluster0-shard-00-02-gpfrf.mongodb.net:27017/pokdemondb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
     mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-    // mongoose model
+    // mongoose model (Work as a Schema)
     const PokemondbStructure = mongoose.model('PokemondbStructure',{
         number: String,
         name: String,
@@ -33,7 +33,7 @@ const adminCreatev = (req, res) => {
 
     const pokemon = new PokemondbStructure(newPokemon).save()
     console.log("New Pokemon: ", pokemon)
-    res.redirect('/admin');
+    res.redirect('/admin/index');
 }
 
 module.exports = adminCreatev;
