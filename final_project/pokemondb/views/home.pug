@@ -39,26 +39,23 @@ html
                 thead
                     tr
                         th(scope='col') #
-                        //- th(scope='col') Image
                         th(scope='col') Pokemon
                         th(scope='col') Type
                         th(scope='col') HP
                         th(scope='col') Attack
                         th(scope='col') Defense
                         th(scope='col') Details
-                tbody
-                    each pokemondb in pokemondbArray
-                        tr
-                            th(scope='row')= pokemondb.number
-                            //- td
-                            //-     img.img-thumbnail(src='img/charizard.png' alt='...')
-                            td= pokemondb.name
-                            td= pokemondb.type
-                            td= pokemondb.hp
-                            td= pokemondb.attack
-                            td= pokemondb.defense
-                            td 
-                                a.badge.badge-primary(href='#') View
+                    each PokemondbStructure in pokemondb
+                        tbody
+                            tr
+                                th(scope='row')=PokemondbStructure.number
+                                td=PokemondbStructure.name
+                                td=PokemondbStructure.type
+                                td=PokemondbStructure.hp
+                                td=PokemondbStructure.attack
+                                td=PokemondbStructure.defense
+                                td 
+                                    a.badge.badge-dark(href='#') View
 
                     //- tr
                     //-     th(scope='row') 002
