@@ -18,11 +18,11 @@ html
                         a.nav-link(href='/about') About
 
         .jumbotron.jumbotron-fluid
-            .container
-                //- h1.display-4 Pokédex Database
-                //- p.lead
-                //- | This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                img.img-fluid(src='img/pokeball.jpg' alt='pokeball hero image')
+                .container
+                    //- h1.display-4 Pokédex Database
+                    //- p.lead
+                    //- | This is a modified jumbotron that occupies the entire horizontal space of its parent.
+                    img.img-fluid(src='img/pokeball.jpg' alt='pokeball hero image')
 
         div.container-fluid
             h1 Pokédex Database
@@ -50,75 +50,76 @@ html
                         th(scope='col') 
                         th(scope='col') 
                 tbody
-                    tr
-                        th(scope='row') 001
-                        //- td
-                        //-     img.img-thumbnail(src='img/charizard.png' alt='...')
-                        td Bulbasaur
-                        td Grass + Poison
-                        td 45
-                        td 49
-                        td 49
-                        td 
-                            a.badge.badge-dark(href='#') Edit
-                        td 
-                            a.badge.badge-light(href='#') Delete
+                    each pokemondb in pokemondbArray
+                        tr
+                            th(scope='row')= pokemondb.number
+                            //- td
+                            //-     img.img-thumbnail(src='img/charizard.png' alt='...')
+                            td= pokemondb.name
+                            td= pokemondb.type
+                            td= pokemondb.hp
+                            td= pokemondb.attack
+                            td= pokemondb.defense
+                            td 
+                                a.badge.badge-dark(href='#') Edit
+                            td 
+                                a.badge.badge-light(href='#') Delete
 
-                    tr
-                        th(scope='row') 002
-                        td Ivysaur
-                        td Grass + Poison
-                        td 60
-                        td 62
-                        td 63
-                        td 
-                            a.badge.badge-dark(href='#') Edit
-                        td 
-                            a.badge.badge-light(href='#') Delete
-                    tr
-                        th(scope='row') 003
-                        td Venusaur
-                        td Grass + Poison
-                        td 80
-                        td 82
-                        td 83
-                        td 
-                            a.badge.badge-dark(href='#') Edit
-                        td 
-                            a.badge.badge-light(href='#') Delete
-                    tr
-                        th(scope='row') 004
-                        td Charmander
-                        td Fire
-                        td 80
-                        td 82
-                        td 83
-                        td 
-                            a.badge.badge-dark(href='#') Edit
-                        td 
-                            a.badge.badge-light(href='#') Delete
-                    tr
-                        th(scope='row') 005
-                        td Charmeleon
-                        td Fire
-                        td 80
-                        td 82
-                        td 83
-                        td 
-                            a.badge.badge-dark(href='#') Edit
-                        td 
-                            a.badge.badge-light(href='#') Delete
-                    tr
-                        th(scope='row') 006
-                        td Charizard
-                        td Fire + Flying
-                        td 80
-                        td 82
-                        td 83
-                        td 
-                            a.badge.badge-dark(href='#') Edit
-                        td 
-                            a.badge.badge-light(href='#') Delete
+                    //- tr
+                    //-     th(scope='row') 002
+                    //-     td Ivysaur
+                    //-     td Grass + Poison
+                    //-     td 60
+                    //-     td 62
+                    //-     td 63
+                    //-     td 
+                    //-         a.badge.badge-dark(href='#') Edit
+                    //-     td 
+                    //-         a.badge.badge-light(href='#') Delete
+                    //- tr
+                    //-     th(scope='row') 003
+                    //-     td Venusaur
+                    //-     td Grass + Poison
+                    //-     td 80
+                    //-     td 82
+                    //-     td 83
+                    //-     td 
+                    //-         a.badge.badge-dark(href='#') Edit
+                    //-     td 
+                    //-         a.badge.badge-light(href='#') Delete
+                    //- tr
+                    //-     th(scope='row') 004
+                    //-     td Charmander
+                    //-     td Fire
+                    //-     td 80
+                    //-     td 82
+                    //-     td 83
+                    //-     td 
+                    //-         a.badge.badge-dark(href='#') Edit
+                    //-     td 
+                    //-         a.badge.badge-light(href='#') Delete
+                    //- tr
+                    //-     th(scope='row') 005
+                    //-     td Charmeleon
+                    //-     td Fire
+                    //-     td 80
+                    //-     td 82
+                    //-     td 83
+                    //-     td 
+                    //-         a.badge.badge-dark(href='#') Edit
+                    //-     td 
+                    //-         a.badge.badge-light(href='#') Delete
+                    //- tr
+                    //-     th(scope='row') 006
+                    //-     td Charizard
+                    //-     td Fire + Flying
+                    //-     td 80
+                    //-     td 82
+                    //-     td 83
+                    //-     td 
+                    //-         a.badge.badge-dark(href='#') Edit
+                    //-     td 
+                    //-         a.badge.badge-light(href='#') Delete
 
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
