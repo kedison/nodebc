@@ -1,7 +1,7 @@
 html
     head
         link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
-        link(rel="stylesheet" href="css/styles.css")
+        link(rel="stylesheet" href="/css/styles.css")
 
     body
         nav.navbar.navbar-expand-lg.navbar-dark(style='background-color: #2c2f30;')
@@ -12,17 +12,14 @@ html
                 ul.navbar-nav.mr-auto
                     li.nav-item
                         a.nav-link(href='/') Database 
-                    li.nav-item.active
-                        a.nav-link(href='/about') 
-                            | About 
-                            span.sr-only (current)
                     li.nav-item
-                        a.nav-link(href='admin/index') Admin 
+                        a.nav-link(href='/about') About 
+                    li.nav-item
+                        a.nav-link(href='/admin/index') Admin 
         br
 
         div.container-fluid
-            h1 About
-            p about asdf
+            h1 Hello from admin create
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')

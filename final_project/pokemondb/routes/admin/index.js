@@ -1,4 +1,4 @@
-const adminv = (req, res) => {
+const indexv = (req, res) => {
 
     const pokemondbArray = [{
             id: 1,
@@ -30,7 +30,7 @@ const adminv = (req, res) => {
     ]
 
 
-    res.render('admin', {
+    res.render('admin/index', {
         pokemondbArray
     })
 
@@ -40,4 +40,4 @@ const adminv = (req, res) => {
     // })
 }
 
-module.exports = adminv;
+module.exports = indexv;
