@@ -25,7 +25,7 @@ app.get('/about', aboutv)
 app.get('/admin/index', adminIndexv)
 app.get('/admin/create', adminCreatev)
 app.post('/admin/create', adminCreatePostv)
-app.get('/admin/delete', adminDeletev)
+app.get('/admin/delete/:id', adminDeletev)
 app.get('/admin/update', adminUpdatev)
 
 app.listen(port, () => console.log(`Pokemon database is running on port ${port}!`))
