@@ -9,6 +9,14 @@ body {
 
 .jumbotron {
     background-color: black;
-    text-align: left;
 }
 
+/* table img {
+    width: 50px;
+}
+
+table td {
+    display: table-cell;
+    vertical-align: middle;
+}
+ */
