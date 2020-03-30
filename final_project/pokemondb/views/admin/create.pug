@@ -21,7 +21,40 @@ html
 
         //- content section
         div.container-fluid
-            h1 Hello from admin create
+            h1 Add Pokemon to database
+            p This is a form that you can use to add a new Pokemon to the database
+
+            hr
+            
+            form(action="/admin/create" method="post")
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputNumber') Pokemon #
+                    .col-sm-10
+                        input#inputNumber.form-control(type='text' placeholder='pokemon #' name='number')
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputName') Name
+                    .col-sm-10
+                        input#inputName.form-control(type='text' placeholder='name' name='name')
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputType') Type
+                    .col-sm-10
+                        input#inputType.form-control(type='text' placeholder='type' name='type')
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputHp') HP
+                    .col-sm-10
+                        input#inputHp.form-control(type='text' placeholder='hp' name='hp')
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputAttack') Attack
+                    .col-sm-10
+                        input#inputAttack.form-control(type='text' placeholder='attack' name='attack')
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputDefense') Defense
+                    .col-sm-10
+                        input#inputDefense.form-control(type='text' placeholder='defense' name='defense')
+                        br
+                        button.btn.btn-danger.btn-lg.btn-block(href='/admin/create') Submit
+
+
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
