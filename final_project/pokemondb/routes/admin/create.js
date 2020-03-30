@@ -1,5 +1,5 @@
-const createv = (req, res) => {
+const adminCreatev = (req, res) => {
     res.render('admin/create')
 }
 
-module.exports = createv;
+module.exports = adminCreatev;
