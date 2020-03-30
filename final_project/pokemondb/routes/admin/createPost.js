@@ -10,7 +10,7 @@ mongoose.connect(uri, {
     useUnifiedTopology: true
 });
 
-const adminCreatev = (req, res) => {
+const adminCreatev = async (req, res) => {
     const newPokemon = {
         number: req.body.number,
         name: req.body.name,
@@ -19,7 +19,7 @@ const adminCreatev = (req, res) => {
         defense: req.body.defense
     }
 
-    const pokemon = new PokemondbStructure(newPokemon).save()
+    const pokemon = await new PokemondbStructure(newPokemon).save()
     console.log("New Pokemon: ", pokemon)
     res.redirect('/admin/index');
 }
