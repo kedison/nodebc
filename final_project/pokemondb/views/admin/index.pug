@@ -55,7 +55,7 @@ html
                         th(scope='col') Update
                         th(scope='col') Remove
                 tbody
-                    each pokemondb in pokemondbArray
+                    each pokemondbStructure in pokemondb
                         tr
                             th(scope='row')= pokemondb.number
                             //- td
@@ -69,63 +69,6 @@ html
                                 a.badge.badge-dark(href='/admin/update') Edit
                             td 
                                 a.badge.badge-danger(href='/admin/delete') Delete
-
-                    //- tr
-                    //-     th(scope='row') 002
-                    //-     td Ivysaur
-                    //-     td Grass + Poison
-                    //-     td 60
-                    //-     td 62
-                    //-     td 63
-                    //-     td 
-                    //-         a.badge.badge-dark(href='#') Edit
-                    //-     td 
-                    //-         a.badge.badge-light(href='#') Delete
-                    //- tr
-                    //-     th(scope='row') 003
-                    //-     td Venusaur
-                    //-     td Grass + Poison
-                    //-     td 80
-                    //-     td 82
-                    //-     td 83
-                    //-     td 
-                    //-         a.badge.badge-dark(href='#') Edit
-                    //-     td 
-                    //-         a.badge.badge-light(href='#') Delete
-                    //- tr
-                    //-     th(scope='row') 004
-                    //-     td Charmander
-                    //-     td Fire
-                    //-     td 80
-                    //-     td 82
-                    //-     td 83
-                    //-     td 
-                    //-         a.badge.badge-dark(href='#') Edit
-                    //-     td 
-                    //-         a.badge.badge-light(href='#') Delete
-                    //- tr
-                    //-     th(scope='row') 005
-                    //-     td Charmeleon
-                    //-     td Fire
-                    //-     td 80
-                    //-     td 82
-                    //-     td 83
-                    //-     td 
-                    //-         a.badge.badge-dark(href='#') Edit
-                    //-     td 
-                    //-         a.badge.badge-light(href='#') Delete
-                    //- tr
-                    //-     th(scope='row') 006
-                    //-     td Charizard
-                    //-     td Fire + Flying
-                    //-     td 80
-                    //-     td 82
-                    //-     td 83
-                    //-     td 
-                    //-         a.badge.badge-dark(href='#') Edit
-                    //-     td 
-                    //-         a.badge.badge-light(href='#') Delete
-
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
