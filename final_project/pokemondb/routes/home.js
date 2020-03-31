@@ -8,14 +8,10 @@ const homev = async (req, res) => {
     mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
  
-    const pokemondb = await PokemondbStructure.find().exec();
+    const pokemondb = await PokemondbStructure.find().sort('number').exec();
 
     res.render('home', { pokemondb })
 
-    // sort function by pokemon number not by ID
-    // pokemondbArray.sort(function (a, b) {
-    //     return parseInt(a.number, 10) - parseInt(b.number, 10);
-    // })
 }
 
 module.exports = homev;

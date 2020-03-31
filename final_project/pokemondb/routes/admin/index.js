@@ -12,10 +12,6 @@ const indexv = async (req, res) => {
 
     res.render('admin/index', { pokemondb })
 
-    // sort function by pokemon number not by ID
-    // pokemondbArray.sort(function (a, b) {
-    //     return parseInt(a.number, 10) - parseInt(b.number, 10);
-    // })
 }
 
 module.exports = indexv;
