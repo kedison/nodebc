@@ -47,7 +47,8 @@ html
                     tr
                         th(scope='col') #
                         th(scope='col') Pokemon
-                        th(scope='col') Type
+                        th(scope='col') Type 1
+                        th(scope='col') Type 2
                         th(scope='col') HP
                         th(scope='col') Attack
                         th(scope='col') Defense
@@ -58,7 +59,8 @@ html
                             tr
                                 th(scope='row')=PokemondbStructure.number
                                 td=PokemondbStructure.name
-                                td=PokemondbStructure.type
+                                td=PokemondbStructure.type_1
+                                td=PokemondbStructure.type_2
                                 td=PokemondbStructure.hp
                                 td=PokemondbStructure.attack
                                 td=PokemondbStructure.defense

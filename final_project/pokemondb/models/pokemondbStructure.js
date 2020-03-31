@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const PokemondbStructure = mongoose.model('PokemondbStructure',{
     number: String,
     name: String,
-    type: String,
+    type_1: String,
+    type_2: String,
     hp: Number,
     attack: Number,
     defense: Number

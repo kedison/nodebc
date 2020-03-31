@@ -7,11 +7,14 @@ const indexv = async (req, res) => {
     let uri ="mongodb://pokemondb:pokemondb1234@cluster0-shard-00-00-gpfrf.mongodb.net:27017,cluster0-shard-00-01-gpfrf.mongodb.net:27017,cluster0-shard-00-02-gpfrf.mongodb.net:27017/pokdemondb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
     mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
- 
-    const pokemondb = await PokemondbStructure.find().exec();
+    // const pokemondb = await PokemondbStructure.find().exec();
+    const pokemondb = await PokemondbStructure.find().sort({"_id":-1}).exec();
 
+    
     res.render('admin/index', { pokemondb })
 
 }
 
 module.exports = indexv;
+
+

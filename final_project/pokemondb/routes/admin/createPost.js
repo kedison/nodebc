@@ -14,7 +14,8 @@ const adminCreatev = async (req, res) => {
     const newPokemon = {
         number: req.body.number,
         name: req.body.name,
-        type: req.body.type,
+        type_1: req.body.type1,
+        type_2: req.body.type2,
         hp: req.body.hp,
         attack: req.body.attack,
         defense: req.body.defense
