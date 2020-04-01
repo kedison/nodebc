@@ -1,13 +1,8 @@
-// mongoose implementation
-const mongoose = require('mongoose');
+
 const PokemondbStructure = require('../../models/pokemondbStructure');
 
 const indexv = async (req, res) => {
-    // mongodb://pokemondb:<password>@cluster0-shard-00-00-gpfrf.mongodb.net:27017,cluster0-shard-00-01-gpfrf.mongodb.net:27017,cluster0-shard-00-02-gpfrf.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority
-    let uri ="mongodb://pokemondb:pokemondb1234@cluster0-shard-00-00-gpfrf.mongodb.net:27017,cluster0-shard-00-01-gpfrf.mongodb.net:27017,cluster0-shard-00-02-gpfrf.mongodb.net:27017/pokdemondb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
-    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-    // const pokemondb = await PokemondbStructure.find().exec();
+    // const pokemondb = await PokemondbStructure.find().exec(); no sort just regular ID sort by a-z
     const pokemondb = await PokemondbStructure.find().sort({"_id":-1}).exec();
 
     
