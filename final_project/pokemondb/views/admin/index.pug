@@ -38,11 +38,91 @@ html
             h5 Update The Database
             p To update the Pokédex Database, please select the create button
 
-            a.btn.btn-danger.btn-lg.btn-block(type='button' href='/admin/create') Create
+            //- a.btn.btn-danger.btn-lg.btn-block(type='button' href='/admin/create') Create
+            a.btn.btn-danger.btn-lg.btn-block(type='button' data-backdrop='static' data-toggle='modal' data-target='#createModal' href='/admin/create') Create
 
+            #createModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='createModal' aria-hidden='true')
+                .modal-dialog.modal-dialog-centered(role='document')
+                    .modal-content
+                        .modal-header
+                            h5#createModal.modal-title Pokemon Stats
+                            button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                span(aria-hidden='true') &times;
+                        .modal-body
+                            form(action="/admin/create" method="post")
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputNumber') Number
+                                    .col-sm-10
+                                        input#inputNumber.form-control(type='text' placeholder='000' name='number')
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputName') Name
+                                    .col-sm-10
+                                        input#inputName.form-control(type='text' placeholder='name' name='name')
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputType1') Type 1
+                                    .col-sm-10
+                                        select.custom-select(name='type1')
+                                            option(selected='' value='-') -
+                                            option(value='Bug') Bug
+                                            option(value='Dark') Dark
+                                            option(value='Dragon') Dragon
+                                            option(value='Electric') Electric
+                                            option(value='Fairy') Fairy
+                                            option(value='Fire') Fire
+                                            option(value='Fighting') Fighting
+                                            option(value='Flying') Flying
+                                            option(value='Ghost') Ghost
+                                            option(value='Grass') Grass
+                                            option(value='Ground') Ground
+                                            option(value='Ice') Ice
+                                            option(value='Normal') Normal
+                                            option(value='Poison') Poison
+                                            option(value='Psychic') Psychic
+                                            option(value='Rock') Rock
+                                            option(value='Steel') Steel
+                                            option(value='Water') Water
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputType2') Type 2
+                                    .col-sm-10
+                                        select.custom-select(name='type2')
+                                            option(selected='' value='-') -
+                                            option(value='Bug') Bug
+                                            option(value='Dark') Dark
+                                            option(value='Dragon') Dragon
+                                            option(value='Electric') Electric
+                                            option(value='Fairy') Fairy
+                                            option(value='Fire') Fire
+                                            option(value='Fighting') Fighting
+                                            option(value='Flying') Flying
+                                            option(value='Ghost') Ghost
+                                            option(value='Grass') Grass
+                                            option(value='Ground') Ground
+                                            option(value='Ice') Ice
+                                            option(value='Normal') Normal
+                                            option(value='Poison') Poison
+                                            option(value='Psychic') Psychic
+                                            option(value='Rock') Rock
+                                            option(value='Steel') Steel
+                                            option(value='Water') Water
+                                        //- input#inputType2.form-control(type='text' placeholder='type 2' name='type2')
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputHp') HP
+                                    .col-sm-10
+                                        input#inputHp.form-control(type='text' placeholder='hp' name='hp')
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputAttack') Attack
+                                    .col-sm-10
+                                        input#inputAttack.form-control(type='text' placeholder='attack' name='attack')
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputDefense') Defense
+                                    .col-sm-10
+                                        input#inputDefense.form-control(type='text' placeholder='defense' name='defense')
+                                .modal-footer
+                                //- button.btn.btn-secondary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
+                                button.btn.btn-primary.btn-lg.btn-block(href='/admin/create') Create
+                                    
             br
-
-            table.table.table-hover.table-borderless.table-light.table-responsive-lg
+            table.table.table-hover.table-borderless.table-light.table-responsive-lg.rounded
                 thead
                     tr
                         th(scope='col') #

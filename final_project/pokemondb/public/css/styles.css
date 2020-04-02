@@ -3,10 +3,6 @@ body {
     color: white;
 }
 
-/* table img{
-    width: 40px;
-} */
-
 .jumbotron {
     background-color: black;
 }
@@ -20,3 +16,8 @@ table td {
     vertical-align: middle;
 }
  */
+
+ #createModal {
+    background-color:rgba(255, 255, 255, 1.00);
+     color: black;
+ }
