@@ -21,17 +21,13 @@ html
                         a.nav-link(href='admin/index') Admin
         
         //- hero section
+        //- image sourced from https://dribbble.com/shots/2623317-Pokeball-Logo-Illustration
         .jumbotron.jumbotron-fluid
-                .container
-                    //- h1.display-4 Pokédex Database
-                    //- p.lead
-                    //- | This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                    img.img-fluid(src='img/pokeball.jpg' alt='pokeball hero image')
+            img.img-fluid(src='img/heroimage.jpg' alt='pokemon hero image')
 
         //- content section
         //- written content sourced from https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon
         div.container-fluid
-            br 
             h1 Pokémon
             p The Pokémon franchise revolves around 896 fictional species of collectible monsters, each having unique designs and skills. Conceived by Satoshi Tajiri in early 1989, Pokémon are creatures that inhabit the fictional Pokémon World. The designs for the multitude of species can draw inspiration from anything such as animals, plants, mythological creatures and even inanimate objects. Many Pokémon are capable of evolving into more powerful species, while others can undergo form changes and achieve similar results. There are even some of them that cannot evolve. Originally, only a handful of artists led by Ken Sugimori designed Pokémon. However, by 2013 a team of 20 artists worked together to create new species designs. Sugimori and Hironobu Yoshida lead the team and determine the final designs. Each iteration of the series has brought about praise and criticism over the numerous creatures.
             
@@ -74,7 +70,7 @@ html
                                             .modal-dialog.modal-dialog-centered(role='document')
                                                 .modal-content
                                                     .modal-header
-                                                        h5#viewDetailsTitle.modal-title Pokemon Detail View
+                                                        h5#viewDetailsTitle.modal-title Pokemon Details
                                                         button.close(type='button' data-dismiss='modal' aria-label='Close')
                                                             span(aria-hidden='true') &times;
                                                     .modal-body

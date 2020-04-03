@@ -21,25 +21,17 @@ html
                             span.sr-only (current)
 
         //- hero section
-        .jumbotron.jumbotron-fluid
-                .container
-                    h1.display-4 Pokédex Database Admin Page
-                    //- p.lead
-                    //- | This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                    //- img.img-fluid(src='/img/pokeball.jpg' alt='pokeball hero image')
-
+        //- image sourced from https://dribbble.com/shots/2623317-Pokeball-Logo-Illustration
+        .container
+            img.img-fluid(src='/img/heroimage_pokeball.jpg' alt='pokemon hero image')
+        
         //- content section
         div.container-fluid
-            h1 Pokédex Database
-            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            
-            br
-
-            h5 Update The Database
-            p To update the Pokédex Database, please select the create button
+            h1 Pokédex Database Admin
+            p This is the Pokédex Database Admin where you can add, edit and delete Pokémons from the database. What you add, edit or delete will be reflected on the database system and will be shown on the home page. Newest inputted data will be shown at the top. On home page, the data will be automatcially sorted by the Pokémon's number. Please be respectful of the data you input, must be accurate data to avoid misleding others. Thank you.
 
             //- a.btn.btn-danger.btn-lg.btn-block(type='button' href='/admin/create') Create
-            a.btn.btn-danger.btn-lg.btn-block(type='button' data-backdrop='static' data-toggle='modal' data-target='#createModal' href='/admin/create') Create
+            a.btn.btn-outline-dark.btn-lg.btn-block(type='button' data-backdrop='static' data-toggle='modal' data-target='#createModal' href='/admin/create') Create
             #createModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='createModal' aria-hidden='true')
                 .modal-dialog.modal-dialog-centered(role='document')
                     .modal-content
@@ -145,7 +137,7 @@ html
                                     td=PokemondbStructure.defense
                                     td 
                                         //- a.badge.badge-dark(href='/admin/update/' + PokemondbStructure.id) Edit
-                                        a.badge.badge-dark(type='button' data-backdrop='static' data-toggle='modal' data-target='#editModal' href='/admin/update/' + PokemondbStructure.id) Edit
+                                        button.badge.badge-primary(type='button' data-backdrop='static' data-toggle='modal' data-target='#editModal' href='/admin/update/' + PokemondbStructure.id) Edit
 
                                         #editModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='editModal' aria-hidden='true')
                                             .modal-dialog.modal-dialog-centered(role='document')
@@ -227,8 +219,24 @@ html
                                                                     input#inputDefense.form-control(type='text' placeholder='defense' name='defense' value=PokemondbStructure.defense)
                                                             br
                                                             button.btn.btn-primary.btn-lg.btn-block Update
+                                                            
                                     td 
-                                        a.badge.badge-danger(href='/admin/delete/' + PokemondbStructure.id) Delete
+                                        //- a.badge.badge-danger(href='/admin/delete/' + PokemondbStructure.id) Delete
+                                        button.badge.badge-danger(type='button' data-backdrop='static' data-toggle='modal' data-target='#deleteModal') Delete
+                                        #deleteModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='deleteModalTitle' aria-hidden='true')
+                                            .modal-dialog.modal-dialog-centered(role='document')
+                                                .modal-content
+                                                    .modal-header
+                                                        h5#deleteModalTitle.modal-title.text-center Confirmation of Delete
+                                                        //- button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                                        //-     span(aria-hidden='true') &times;
+                                                    .modal-body
+                                                        h5 Warning:
+                                                        p You are about to delete a Pokemon from the database!
+                                                    .modal-footer
+                                                        a.btn.btn-outline-danger.btn-lg.btn-block( href='/admin/delete/' + PokemondbStructure.id) Delete
+                                                        button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Cancel
+
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
