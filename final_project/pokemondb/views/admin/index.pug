@@ -136,10 +136,9 @@ html
                                 td=PokemondbStructure.attack
                                 td=PokemondbStructure.defense
                                 td 
-                                    //- a.badge.badge-dark(href='/admin/update/' + PokemondbStructure.id) Edit
-                                    button.badge.badge-primary(type='button' data-backdrop='static' data-toggle='modal' data-target='#editModal' href='/admin/update/' + PokemondbStructure.id) Edit
-
-                                    #editModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='editModal' aria-hidden='true')
+                                    - var editIdModal = `editModal${PokemondbStructure.id}`
+                                    button.badge.badge-primary(type='button' data-backdrop='static' data-toggle='modal' data-target=`#${editIdModal}` href='/admin/update/' + PokemondbStructure.id) Edit
+                                    div.modal.fade(id=`${editIdModal}` tabindex='-1' role='dialog' aria-labelledby='editModal' aria-hidden='true')
                                         .modal-dialog.modal-dialog-centered(role='document')
                                             .modal-content
                                                 .modal-header
