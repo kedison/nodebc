@@ -108,9 +108,9 @@ html
                                     .col-sm-10
                                         input#inputDefense.form-control(type='text' placeholder='defense points' name='defense')
                                 .form-group.row
-                                    label.col-sm-2.col-form-label(for='inputDescription') Description
+                                    label.col-sm-2.col-form-label(for='inputDescription') Details
                                     .col-sm-10
-                                        input#inputDescription.form-control(type='text' placeholder='description' name='description')
+                                        textarea#inputDescription.form-control(type='text' placeholder='description' name='description')
                                 br
                                 //- button.btn.btn-secondary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
                                 button.btn.btn-primary.btn-lg.btn-block(href='/admin/create') Create
@@ -220,7 +220,7 @@ html
                                                             .col-sm-10
                                                                 input#inputDefense.form-control(type='text' placeholder='defense' name='defense' value=PokemondbStructure.defense)
                                                         .form-group.row
-                                                            label.col-sm-2.col-form-label(for='inputDescription') Description
+                                                            label.col-sm-2.col-form-label(for='inputDescription') Details
                                                             .col-sm-10
                                                                 input#inputDescription.form-control(type='text' placeholder='description' name='description' value=PokemondbStructure.description)
                                                         br
@@ -232,11 +232,12 @@ html
                                     div.modal.fade(id=`${deleteIdModal}` tabindex='-1' role='dialog' aria-labelledby='deleteModalTitle' aria-hidden='true')
                                         .modal-dialog.modal-dialog-centered(role='document')
                                             .modal-content
-                                                .modal-header
-                                                    h5#deleteModalTitle.modal-title Confirmation of Delete
-                                                .modal-body
-                                                    h5 Warning:
-                                                    h5=PokemondbStructure.name
+                                                //- .modal-header
+                                                //-     h5#deleteModalTitle.modal-title Confirmation of Delete
+                                                .modal-body.text-center
+                                                    h5 Confirmation of Delete
+                                                    hr
+                                                    h3=PokemondbStructure.name
                                                     p You are about to delete a Pokemon from the database!
                                                     br
                                                     a.btn.btn-outline-danger.btn-lg.btn-block(href='/admin/delete/' + PokemondbStructure.id) Delete

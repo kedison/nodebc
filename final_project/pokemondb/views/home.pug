@@ -77,10 +77,10 @@ html
                                                         .badge.badge-secondary= PokemondbStructure.type_1
                                                         .badge.badge-secondary(style="margin-left:1em")= PokemondbStructure.type_2
                                                         hr
-                                                        p="HP: " + PokemondbStructure.hp
-                                                        p="Attack: " + PokemondbStructure.attack
-                                                        p="Defense: " + PokemondbStructure.defense
-                                                        p="Description: " + PokemondbStructure.description
+                                                        p.list-inline-item="HP: " + PokemondbStructure.hp
+                                                        p.list-inline-item="Attack: " + PokemondbStructure.attack
+                                                        p.list-inline-item="Defense: " + PokemondbStructure.defense
+                                                        p=PokemondbStructure.description
                                                         
                                                     //- .modal-footer
                                                     //-     button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
