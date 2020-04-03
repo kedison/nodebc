@@ -26,7 +26,7 @@ html
             img.img-fluid(src='/img/heroimage_pokeball.jpg' alt='pokemon hero image')
         
         //- content section
-        div.container
+        .container
             h1 Pokédex Database Admin
             p This is the Pokédex Database Admin where you can add, edit and delete Pokémons from the database. What you add, edit or delete will be reflected on the database system and will be shown on the home page. Newest inputted data will be shown at the top. On home page, the data will be automatcially sorted by the Pokémon's number. Please be respectful of the data you input, must be accurate data to avoid misleding others. Thank you.
 
@@ -236,7 +236,11 @@ html
                                                     .modal-footer
                                                         a.btn.btn-outline-danger.btn-lg.btn-block( href='/admin/delete/' + PokemondbStructure.id) Delete
                                                         button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Cancel
-
+        
+        //- footer section
+        .container.footer
+            hr
+            p copyright 2020 all rights reserved   
 
         script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
         script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
