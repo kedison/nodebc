@@ -62,18 +62,28 @@ html
                                     td=PokemondbStructure.attack
                                     td=PokemondbStructure.defense
                                     td
-                                        button.badge.badge-dark(type='button' data-backdrop='static' data-toggle='modal' data-target='#viewDetails') View
-                                        #viewDetails.modal.fade(tabindex='-1' role='dialog' aria-labelledby='viewDetailsTitle' aria-hidden='true')
+                                        - var viewIdModal = `viewModal${PokemondbStructure.id}`
+                                        button.badge.badge-dark(type='button' data-backdrop='static' data-toggle='modal' data-target=`#${viewIdModal}`) View
+                                        div.modal.fade(id=`${viewIdModal}` tabindex='-1' role='dialog' aria-labelledby='viewDetailsTitle' aria-hidden='true')
                                             .modal-dialog.modal-dialog-centered(role='document')
                                                 .modal-content
                                                     .modal-header
-                                                        h5#viewDetailsTitle.modal-title Pokemon Details
+                                                        h5="#" + PokemondbStructure.number
+                                                        //- h5#viewDetailsTitle.modal-title Pokemon Details
                                                         button.close(type='button' data-dismiss='modal' aria-label='Close')
                                                             span(aria-hidden='true') &times;
                                                     .modal-body
-                                                        | ...
-                                                    .modal-footer
-                                                        button.btn.btn-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
+                                                        h5=PokemondbStructure.name
+                                                        .badge.badge-secondary= PokemondbStructure.type_1
+                                                        .badge.badge-secondary(style="margin-left:1em")= PokemondbStructure.type_2
+                                                        hr
+                                                        p="HP: " + PokemondbStructure.hp
+                                                        p="Attack: " + PokemondbStructure.attack
+                                                        p="Defense: " + PokemondbStructure.defense
+                                                        p="Description: " + PokemondbStructure.description
+                                                        
+                                                    //- .modal-footer
+                                                    //-     button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
         //- footer section
         .container.footer
             hr

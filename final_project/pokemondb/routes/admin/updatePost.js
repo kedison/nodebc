@@ -11,7 +11,8 @@ const adminUpdatev = async (req, res) => {
         type_2: req.body.type2,
         hp: req.body.hp,
         attack: req.body.attack,
-        defense: req.body.defense
+        defense: req.body.defense,
+        description: req.body.description
     };
 
     let filter = { _id: idToUpdate };
