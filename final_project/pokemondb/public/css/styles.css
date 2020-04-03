@@ -9,8 +9,7 @@ body {
 } */
 
 .jumbotron {
-    background-color: black;
-    color: white;
+    background-color: white;
 }
 
 /* table img {
@@ -23,7 +22,7 @@ table td {
 }
  */
 
- #createModal, #editModal {
+ #createModal{
     background-color:rgba(255, 255, 255, 1.00);
  }
 
