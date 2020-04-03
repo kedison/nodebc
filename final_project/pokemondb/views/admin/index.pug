@@ -5,7 +5,7 @@ html
 
     body
         //- nav bar section
-        nav.navbar.navbar-expand-sm.navbar-light.sticky-top(style='background-color: white;')
+        nav.navbar.navbar-expand-sm.navbar-light.sticky-top.container(style='background-color: white;')
             a.navbar-brand(href='/') Pokédex
             button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
                 span.navbar-toggler-icon
@@ -26,7 +26,7 @@ html
             img.img-fluid(src='/img/heroimage_pokeball.jpg' alt='pokemon hero image')
         
         //- content section
-        div.container-fluid
+        div.container
             h1 Pokédex Database Admin
             p This is the Pokédex Database Admin where you can add, edit and delete Pokémons from the database. What you add, edit or delete will be reflected on the database system and will be shown on the home page. Newest inputted data will be shown at the top. On home page, the data will be automatcially sorted by the Pokémon's number. Please be respectful of the data you input, must be accurate data to avoid misleding others. Thank you.
 
