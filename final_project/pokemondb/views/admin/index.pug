@@ -227,16 +227,15 @@ html
                                             .modal-dialog.modal-dialog-centered(role='document')
                                                 .modal-content
                                                     .modal-header
-                                                        h5#deleteModalTitle.modal-title.text-center Confirmation of Delete
-                                                        //- button.close(type='button' data-dismiss='modal' aria-label='Close')
-                                                        //-     span(aria-hidden='true') &times;
+                                                        h5#deleteModalTitle.modal-title Confirmation of Delete
                                                     .modal-body
                                                         h5 Warning:
+                                                        h5=PokemondbStructure.name
                                                         p You are about to delete a Pokemon from the database!
-                                                    .modal-footer
+                                                        br
                                                         a.btn.btn-outline-danger.btn-lg.btn-block(href='/admin/delete/' + PokemondbStructure.id) Delete
                                                         button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Cancel
-        
+            
         //- footer section
         .container.footer
             hr
