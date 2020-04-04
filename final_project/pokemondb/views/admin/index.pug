@@ -114,7 +114,7 @@ html
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputImage') Image
                                     .col-sm-10
-                                        input#inputImage.form-control(type='text' placeholder='image' name='image')
+                                        input#inputImage.form-control(type='text' placeholder='image src link' name='image')
                                 br
                                 //- button.btn.btn-secondary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
                                 button.btn.btn-primary.btn-lg.btn-block(href='/admin/create') Create
@@ -245,6 +245,7 @@ html
                                                 .modal-body.text-center
                                                     h5 Confirmation of Delete
                                                     hr
+                                                    img(src=PokemondbStructure.image)
                                                     h3=PokemondbStructure.name
                                                     p You are about to delete a Pokemon from the database!
                                                     br
