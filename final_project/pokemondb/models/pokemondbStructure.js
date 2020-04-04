@@ -11,7 +11,8 @@ const PokemondbStructure = mongoose.model('PokemondbStructure',{
     hp: Number,
     attack: Number,
     defense: Number,
-    description: String
+    description: String,
+    image: String
 });
 
 module.exports = PokemondbStructure;

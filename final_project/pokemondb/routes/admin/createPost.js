@@ -9,7 +9,8 @@ const adminCreatev = async (req, res) => {
         hp: req.body.hp,
         attack: req.body.attack,
         defense: req.body.defense,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     }
 
     const pokemon = await new PokemondbStructure(newPokemon).save()

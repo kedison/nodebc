@@ -111,6 +111,10 @@ html
                                     label.col-sm-2.col-form-label(for='inputDescription') Details
                                     .col-sm-10
                                         textarea#inputDescription.form-control(type='text' placeholder='description' name='description')
+                                .form-group.row
+                                    label.col-sm-2.col-form-label(for='inputImage') Image
+                                    .col-sm-10
+                                        input#inputImage.form-control(type='text' placeholder='image' name='image')
                                 br
                                 //- button.btn.btn-secondary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
                                 button.btn.btn-primary.btn-lg.btn-block(href='/admin/create') Create
@@ -222,7 +226,11 @@ html
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputDescription') Details
                                                             .col-sm-10
-                                                                input#inputDescription.form-control(type='text' placeholder='description' name='description' value=PokemondbStructure.description)
+                                                                textarea#inputDescription.form-control(type='text' placeholder='description' name='description')=PokemondbStructure.description
+                                                        .form-group.row
+                                                            label.col-sm-2.col-form-label(for='inputImage') Image
+                                                            .col-sm-10
+                                                                input#inputImage.form-control(type='text' placeholder='image' name='image' value=PokemondbStructure.image)
                                                         br
                                                         button.btn.btn-primary.btn-lg.btn-block Update
                                                         
