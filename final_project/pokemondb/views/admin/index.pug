@@ -248,7 +248,8 @@ html
                                                     hr
                                                     img(src=PokemondbStructure.image)
                                                     h3=PokemondbStructure.name
-                                                    p You are about to delete a Pokemon from the database!
+                                                    p 
+                                                        .list-inline-item="You are about to delete " + PokemondbStructure.name + " from the database. Proceed?"
                                                     br
                                                     a.btn.btn-outline-danger.btn-lg.btn-block(href='/admin/delete/' + PokemondbStructure.id) Delete
                                                     button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Cancel
