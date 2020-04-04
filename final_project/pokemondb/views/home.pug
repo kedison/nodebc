@@ -4,13 +4,19 @@ html
         link(rel="stylesheet" href="css/styles.css")
 
     body
+        //- hero section
+        //- image sourced from https://dribbble.com/shots/2623317-Pokeball-Logo-Illustration and https://www.pokemon.com/us/pokedex/
+        .jumbotron.jumbotron-fluid
+            img.img-fluid(src='img/heroimage.jpg' alt='pokemon hero image')
+
         //- nav bar section
         nav.navbar.navbar-expand-sm.navbar-light.sticky-top.container(style='background-color: white')
-            a.navbar-brand(href='/') Pokédex
+            a.navbar-brand(href='/')
+                img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png" style="width:45px")
             button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
+                span.custom-toggler-icon menu
             #navbarText.collapse.navbar-collapse
-                ul.navbar-nav.mr-auto
+                ul.navbar-nav
                     li.nav-item.active
                         a.nav-link(href='/')
                             | Database 
@@ -20,16 +26,11 @@ html
                     li.nav-item
                         a.nav-link(href='admin/index') Admin
         
-        //- hero section
-        //- image sourced from https://dribbble.com/shots/2623317-Pokeball-Logo-Illustration and https://www.pokemon.com/us/pokedex/
-        .jumbotron.jumbotron-fluid
-            img.img-fluid(src='img/heroimage.jpg' alt='pokemon hero image')
-
         //- content section
         //- written content sourced from https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon
         .container
-            
-
+            hr
+            br
             h1 Pokédex Database
             .table-responsive
                 table.table.table-hover.table-borderless.table-light.rounded.border
@@ -60,7 +61,7 @@ html
                                             .modal-dialog.modal-dialog-centered(role='document')
                                                 .modal-content
                                                     .modal-header
-                                                        h3="#" + PokemondbStructure.number
+                                                        h4="#" + PokemondbStructure.number
                                                         //- h5#viewDetailsTitle.modal-title Pokemon Details
                                                         button.close(type='button' data-dismiss='modal' aria-label='Close')
                                                             span(aria-hidden='true') &times;
@@ -72,11 +73,10 @@ html
                                                             .badge.badge-dark(style="margin-left:0.5em")= PokemondbStructure.type_2
                                                         hr
                                                         h5
-                                                            .list-inline-item="HP: " + PokemondbStructure.hp
-                                                            .list-inline-item="ATK: " + PokemondbStructure.attack
+                                                            .list-inline-item="HP: " + PokemondbStructure.hp + " /"
+                                                            .list-inline-item="ATK: " + PokemondbStructure.attack + " /"
                                                             .list-inline-item="DEF: " + PokemondbStructure.defense
                                                         p=PokemondbStructure.description
-                                                        
                                                     //- .modal-footer
                                                     //-     button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
             br

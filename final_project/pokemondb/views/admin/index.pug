@@ -6,9 +6,10 @@ html
     body
         //- nav bar section
         nav.navbar.navbar-expand-sm.navbar-light.sticky-top.container(style='background-color: white;')
-            a.navbar-brand(href='/') Pokédex
+            a.navbar-brand(href='/')
+                img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png" style="width:45px")
             button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
+                span.custom-toggler-icon menu
             #navbarText.collapse.navbar-collapse
                 ul.navbar-nav.mr-auto
                     li.nav-item
@@ -43,7 +44,7 @@ html
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputNumber') Number
                                     .col-sm-10
-                                        input#inputNumber.form-control(type='text' placeholder='000' name='number')
+                                        input#inputNumber.form-control(type='text' minlength='3' maxlength='3' placeholder='000' name='number')
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputName') Name
                                     .col-sm-10
@@ -98,15 +99,15 @@ html
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputHp') HP
                                     .col-sm-10
-                                        input#inputHp.form-control(type='text' placeholder='hp points' name='hp')
+                                        input#inputHp.form-control(type='number' placeholder='hp points' name='hp')
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputAttack') Attack
                                     .col-sm-10
-                                        input#inputAttack.form-control(type='text' placeholder='attack points' name='attack')
+                                        input#inputAttack.form-control(type='number' placeholder='attack points' name='attack')
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputDefense') Defense
                                     .col-sm-10
-                                        input#inputDefense.form-control(type='text' placeholder='defense points' name='defense')
+                                        input#inputDefense.form-control(type='number' placeholder='defense points' name='defense')
                                 .form-group.row
                                     label.col-sm-2.col-form-label(for='inputDescription') Details
                                     .col-sm-10
@@ -158,7 +159,7 @@ html
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputNumber') Number
                                                             .col-sm-10
-                                                                input#inputNumber.form-control(type='text' placeholder='000' name='number' value=PokemondbStructure.number)
+                                                                input#inputNumber.form-control(type='text' minlength='3' maxlength='3' placeholder='000' name='number' value=PokemondbStructure.number)
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputName') Name
                                                             .col-sm-10
@@ -214,15 +215,15 @@ html
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputHp') HP
                                                             .col-sm-10
-                                                                input#inputHp.form-control(type='text' placeholder='hp' name='hp' value=PokemondbStructure.hp)
+                                                                input#inputHp.form-control(type='number' placeholder='hp' name='hp' value=PokemondbStructure.hp)
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputAttack') Attack
                                                             .col-sm-10
-                                                                input#inputAttack.form-control(type='text' placeholder='attack' name='attack' value=PokemondbStructure.attack)
+                                                                input#inputAttack.form-control(type='number' placeholder='attack' name='attack' value=PokemondbStructure.attack)
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputDefense') Defense
                                                             .col-sm-10
-                                                                input#inputDefense.form-control(type='text' placeholder='defense' name='defense' value=PokemondbStructure.defense)
+                                                                input#inputDefense.form-control(type='number' placeholder='defense' name='defense' value=PokemondbStructure.defense)
                                                         .form-group.row
                                                             label.col-sm-2.col-form-label(for='inputDescription') Details
                                                             .col-sm-10
