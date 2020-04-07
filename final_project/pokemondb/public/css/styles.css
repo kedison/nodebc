@@ -3,8 +3,8 @@ body {
 }
 #body.container p {
     background-color: white;
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 36px;
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -27,5 +27,14 @@ body {
      color: grey;
  }
 
+#tag {
+     font-weight: 400;
+ }
+
+ #description {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+ }
 
 

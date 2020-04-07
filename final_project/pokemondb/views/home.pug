@@ -71,14 +71,15 @@ html
                                                         img.img-fluid(src=PokemondbStructure.image)
                                                         h2=PokemondbStructure.name
                                                         h4
-                                                            .badge.badge-dark=PokemondbStructure.type_1
-                                                            .badge.badge-dark(style="margin-left:0.5em")= PokemondbStructure.type_2
+                                                            #tag.badge.badge-dark=PokemondbStructure.type_1
+                                                            #tag.badge.badge-dark(style="margin-left:0.5em")= PokemondbStructure.type_2
                                                         hr
                                                         h5
                                                             .list-inline-item="HP: " + PokemondbStructure.hp + " /"
                                                             .list-inline-item="ATK: " + PokemondbStructure.attack + " /"
                                                             .list-inline-item="DEF: " + PokemondbStructure.defense
-                                                        p=PokemondbStructure.description
+                                                        p
+                                                            #description=PokemondbStructure.description
                                                     //- .modal-footer
                                                     //-     button.btn.btn-outline-primary.btn-lg.btn-block(type='button' data-dismiss='modal') Close
             br
